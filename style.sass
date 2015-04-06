@@ -1,0 +1,1360 @@
+@import bourbon/bourbon
+@import http://fast.fonts.net/cssapi/40f2feb1-bef4-46e0-8c76-50c7a0bc7449.css
+/*----------*/
+$darkgray: #211d1e
+$blue: #455cc7
+$skyBlue: #00a7e1
+$maroon: #e40d62
+$pink: #e56d7b
+$pumpkin: #f5ac39
+$lemon: #fbe343
+$honey: #ffc627
+$passion: #7c4199
+
+$hdarkgray: rgba(33,29,30,.5)
+$mrslollipop: 'Mrs Lollipop W00 Regular'
+$rockwelllight: 'Rockwell W01 Light'
+$rockwell: 'Rockwell W01'
+$avenirlight: 'Avenir LT W01_35 Light'
+$avenir: 'Avenir LT W01_55 Roman'
+
+// ======================================================================================================
+// ========================================= START GENERAL ==============================================
+// ======================================================================================================
+
+.wrap
+  max-width: 1280px
+  margin: 0 auto
+  position: relative
+  padding: 0
+  +clearfix
+
+.row
+  +clearfix
+
+/* FRUIT COLORS */
+$ra: raspberry, #e40d62
+$pu: pumpkin, $pumpkin
+$st: strawberry, #e56d7b
+$le: lemon, $lemon
+$fruits: $ra $pu $st $le
+@each $fruit in $fruits
+  $class: nth($fruit,1)
+  $color: nth($fruit,2)
+  svg
+    path.#{$class}
+      fill: $color
+  .#{$class}
+    background-color: $color
+    &.facts
+      background-color: transparent
+      h2
+        color: $color
+    &.blurb
+      a
+        color: $color
+    &.portion
+      background-color: transparent
+      color: nth($fruit,2)
+  @if $class == lemon or $class == pineapple
+    #recipe-blogger
+      a.#{$class}
+        color: $darkgray !important
+
+html
+  height: 100%
+
+body
+  background: white
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  width: 100%
+  min-height: 100%
+  font-family: $avenirlight
+
+h1, h2, h3, h4, h5, h6
+  font-family: $mrslollipop
+  text-transform: lowercase
+  margin: 0 auto 1rem
+  line-height: 1
+  color: #222
+
+h1
+  font-size: 70px
+
+h2
+  font-size: 48px
+
+h3
+  font-size: 36px
+
+h4
+  font-size: 24px
+
+a
+  text-decoration: none
+  color: $darkgray
+
+  &.phone-link
+    cursor: default
+
+p
+  margin: 0 0 2rem
+  font-size: 19px
+  line-height: 1.5
+
+input, textarea, select
+  font-size: 18px
+  font-family: $avenirlight
+  +placeholder
+    color: $darkgray
+  &:focus
+    outline: none
+
+hr
+  +size(100% 4px)
+  background: url(/wp-content/themes/noosa/img/hr.png) 0
+  padding: 0
+  margin: 20px auto
+  border: 0
+  max-width: 1280px
+
+.yoghurt-button
+  background: transparent url('img/recipe-button-blue.png') center no-repeat
+  background-size: contain
+  position: relative
+  line-height: 48px
+  color: white
+  padding: 5px 30px
+  display: inline-block
+  font-family: $rockwell
+  font-size: 21px
+  text-transform: lowercase
+
+  svg
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+
+    .blob
+      +transition( .2s fill 0 )
+
+  .blob-label
+    text-decoration: none
+    color: white
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    text-align: center
+
+  &:hover svg .blob
+    fill: #00729A
+
+.lid-list
+  margin: 40px auto
+  padding: 0
+  list-style: none
+  text-align: center
+  li
+    width: 24%
+    margin: 0
+    display: inline-block
+    text-align: center
+    padding: 0
+    a
+      font-size: 24px
+      line-height: 50px
+      color: $darkgray
+      text-transform: lowercase
+      text-decoration: none
+      font-family: $mrslollipop
+      img
+        text-align: center
+        margin: 0 auto
+        display: block
+        border: 0
+        +size(100% auto)
+
+
+.picture-mast
+  min-height: 600px
+  position: relative
+  overflow: hidden
+  padding: 86px 0 0
+  background-size: cover
+  .wrap
+    z-index: 10
+    h1
+      margin: 0 0 20px 0
+      padding: 70px 380px 0 100px
+      font-size: 75px
+      line-height: 75px
+      float: left
+      color: #fff
+      display: inline-block
+      font-weight: 100
+    img
+      border-radius: 50%
+      +size(86px)
+      float: left
+      margin: 0 10px 0 100px
+      display: block
+    span
+      line-height: 86px
+      font-size: 18px
+      color: #fff
+      font-weight: 100
+    p
+      font-size: 18px
+      line-height: 28px
+      color: #fff
+      width: 50%
+      padding: 0 0 0 8%
+      margin: 0
+
+  .background
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 0
+    +size(100%)
+    background: url(/wp-content/themes/noosa/img/recipe-mast-mask.png) no-repeat bottom center
+
+.recipe-more
+  h1
+    font-size: 75px
+    line-height: 75px
+    margin: 0 0 10px 0
+    padding: 60px 2.5% 20px
+    color: #000
+    text-align: center
+  .wrap
+    width: 80%
+    padding: 0 0 100px 0
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      +size(100% auto)
+      +clearfix
+      li
+        width: 31.33%
+        float: left
+        margin: 0 1% 2%
+        padding: 0
+        overflow-x: hidden
+        a
+          display: block
+          +size(100%)
+          position: relative
+          text-decoration: none
+          margin: 0
+          img
+            border: 0
+            +size(100% auto)
+            &.mask
+              position: absolute
+              bottom: 0
+              left: 0
+              z-index: 3
+              +size(110% auto)
+          h2
+            font-size: 18px
+            line-height: 1
+            margin: 0 auto
+            padding: 0
+            text-align: center
+            position: absolute
+            bottom: 24px
+            left: 0
+            width: 100%
+            z-index: 5
+            color: #fff
+            font-family: $rockwelllight
+    a
+      color: #fff
+      font-size: 21px
+      line-height: 62px
+      text-decoration: none
+      text-transform: lowercase
+      display: block
+      margin: 80px auto 0
+      text-align: center
+      position: relative
+      font-family: $rockwelllight
+      +size(182px 62px)
+      span
+        +size(100%)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 5
+        svg
+          +size(15px 9px)
+      .button
+        +size(100%)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 2
+        svg
+          +size(100%)
+
+
+// ======================================================================================================
+// ========================================== END GENERAL ===============================================
+// ======================================================================================================
+
+// ======================================================================================================
+// ========================================== START HEADER ==============================================
+// ======================================================================================================
+
+
+header
+  +size(100% 86px)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 999
+  background: url(/wp-content/themes/noosa/img/header-mask.png) no-repeat center top
+
+  .logo-link
+    display: inline-block
+    margin: 19px 19% 0 0
+    padding: 0
+    float: left
+    +size(209px 48px)
+
+    img
+      width: 100%
+      height: auto
+      border: 0
+
+  #nav-canvas
+    position: absolute
+    left: 50%
+    margin-left: -634px
+    top: 0
+
+  nav
+    position: relative
+
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      li
+        padding: 0
+        margin: 0 2.5%
+        display: inline-block
+        a
+          line-height: 86px
+          font-family: $rockwelllight
+          font-size: 19px
+          color: #fff
+          text-decoration: none
+
+.flip-v
+  +transform(scaleY(-1))
+.flip-h
+  +transform(scaleX(-1))
+.r-90
+  +transform(rotate(90deg))
+.r-90n
+  +transform(rotate(-90deg))
+
+.hero
+  padding-top: 86px
+  text-align: center
+
+// ======================================================================================================
+// =========================================== END HEADER ===============================================
+// ======================================================================================================
+
+// ======================================================================================================
+// ======================================= START PRODUCT PAGE ===========================================
+// ======================================================================================================
+
+#content
+  background: #fff
+
+#product-mast
+  min-height: 600px
+  background-image: url(/wp-content/themes/noosa/img/product-description-mask.png)
+  background-position: bottom center
+  background-repeat: no-repeat
+  h1
+    margin: 0
+    padding: 68px 0 0 100px
+    font-size: 94px
+    line-height: 94px
+    float: left
+    color: #fff
+    display: inline-block
+  img
+    border: 0
+    padding: 65px 0 0 30px
+  .navigation
+    position: absolute
+    right: 0
+    top: 70px
+    border: 1px solid $hdarkgray
+    border-right: 0px
+    margin: 0
+    padding: 0
+    list-style: none
+    width: 110px
+    li
+      padding: 12px 0
+      &.previous, &.next
+        border-bottom: 1px solid $hdarkgray
+        a
+          display: block
+          text-decoration: none
+          +size(38px 39px)
+          margin: 0 auto
+          background: url(/wp-content/themes/noosa/img/blob-arrow.png) no-repeat center center
+          span
+            display: none
+      &.next
+        border-top: 1px solid $hdarkgray
+        border-bottom: 0px
+        a
+          +transform(rotate(180deg))
+      &.more
+        padding: 24px 0
+        a
+          text-align: center
+          color: $darkgray
+          text-decoration: none
+          text-transform: lowercase
+          font-size: 15px
+          line-height: 18px
+          display: block
+          +size(100%)
+          img
+            display: block
+            border: 0
+            padding: 0 0 6px 0
+            margin: 0 auto
+
+#product-description
+  .product-image
+    float: left
+    margin: -180px 0 0
+  .block
+    margin: -200px 0 0
+    float: right
+    padding: 150px 0px 0 0
+    h1
+      font-size: 40px
+      line-height: 48px
+      color: $darkgray
+      margin: 0 100px 10px 0
+      padding: 0
+      width: 420px
+    p
+      font-size: 20px
+      line-height: 30px
+      color: $darkgray
+      margin: 0 100px 30px 0
+      padding: 0
+      width: 420px
+    form
+      margin: 0 0 40px 0
+      padding: 0
+      +clearfix
+      span
+        font-size: 18px
+        line-height: 40px
+        font-weight: 400
+        color: $darkgray
+        font-family: $rockwell
+        float: left
+      input
+        margin: 0 10px
+        padding: 0 10px
+        line-height: 40px
+        border: 1px solid $hdarkgray
+        border-radius: 2px
+        +box-sizing(border-box)
+        width: 100px
+        font-family: $avenir
+        color: $darkgray
+        font-size: 14px
+        float: left
+      .submit-button
+        +size(38px 39px)
+        position: relative
+        float: left
+        img
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 1
+        input
+          +size(100%)
+          opacity: 0
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 2
+          margin: 0
+          padding: 0
+          &:hover
+            cursor: pointer
+    .product-sizes
+      margin: 0
+      padding: 0 0 100px 0
+      list-style: none
+      li
+        padding: 0
+        margin: 0 0 0 25px
+        display: inline-block
+        position: relative
+        font-size: 18px
+        line-height: 18px
+        color: $darkgray
+        min-height: 104px
+        span
+          position: absolute
+          top: 64px
+          width: 100%
+          text-align: center
+          display: block
+          padding: 0
+          margin: 0
+        .key
+          +size(100% 56px)
+          position: absolute
+          top: 0px
+          left: 0px
+          z-index: 2
+        .mask
+          background: url(/wp-content/themes/noosa/img/product-sizes-mask.png) no-repeat 0 0
+          +size(100% 56px)
+          position: absolute
+          top: 0px
+          left: 0px
+          z-index: 3
+        &.oz-8
+          width: 60px
+        &.oz-16
+          width: 54px
+          .mask
+            background-position: -60px 0
+        &.pack-4
+          width: 79px
+          .mask
+            background-position: -114px 0
+        &.pack-v
+          width: 114px
+          .mask
+            background-position: -193px 0
+#product-social
+  .left
+    float: left
+    width: 315px
+    margin: 0 20px 0 0
+  #instagram, #twitter
+    display: block
+    position: relative
+    +size(315px)
+    .icon
+      position: absolute
+      top: 15px
+      left: 15px
+      a
+        display: block
+        +size(100%)
+        span
+          display: none
+  #instagram
+    top: -5px
+    .icon
+      +size(53px 45px)
+      a
+        display: block
+        +size(100%)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 10
+        background: url(/wp-content/themes/noosa/img/blob-instagram.png) no-repeat 0 0
+      div
+        position: absolute
+        top: 5px
+        left: 10px
+        z-index: 5
+        +size(30px)
+    .mask
+      +size(100%)
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      background-position: 0 0
+      background-repeat: no-repeat
+      img
+        +size(100%)
+        border: 0
+  #twitter
+    margin: 20px 0 0 0
+    .icon
+      +size(53px 45px)
+      a
+        display: block
+        +size(100%)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 10
+        background: url(/wp-content/themes/noosa/img/blob-twitter.png) no-repeat 0 0
+      div
+        position: absolute
+        top: 5px
+        left: 10px
+        z-index: 5
+        +size(30px)
+    .tweet
+      position: absolute
+      top: 22%
+      left: 7.5%
+      width: 85%
+      height: 70%
+      z-index: 10
+      p
+        color: #fff
+        font-size: 24px
+        line-height: 32px
+        margin: 0
+        padding: 0
+        font-weight: 100
+      .meta
+        position: absolute
+        bottom: 0
+        a
+          color: #fff
+          text-decoration: none
+          margin: 0 10px 0 0
+    img
+      position: absolute
+      top: 0
+      left: 0
+
+  .recipe
+    +size(945px 644px)
+    float: right
+    position: relative
+    img
+      +size(100% auto)
+      border: 0
+    .blurb
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 3% 2.5%
+      h1
+        color: #fff
+        font-size: 34px
+        line-height: 34px
+        margin: 0 0 6px 0
+        padding: 0
+        text-transform: lowercase
+        font-family: $mrslollipop
+      p
+        font-size: 18px
+        line-height: 24px
+        color: #fff
+        margin: 0
+        padding: 0
+      a
+        display: block
+        +size(165px 62px)
+        background: url(/wp-content/themes/noosa/img/recipe-button.svg) no-repeat center center
+        text-transform: lowercase
+        text-decoration: none
+        font-family: $rockwell
+        font-size: 20px
+        line-height: 62px
+        margin: 18px 5% 0
+        float: right
+        text-align: center
+
+#product-details
+  h1
+    font-size: 75px
+    line-height: 75px
+    margin: 0 0 10px 0
+    padding: 90px 5% 0
+    color: #000
+    text-align: center
+  p
+    font-size: 20px
+    line-height: 28px
+    color: $darkgray
+    margin: 0
+    padding: 0 15%
+    text-align: center
+  ul
+    margin: 60px auto 0
+    max-width: 1280px
+    padding: 0
+    list-style: none
+    text-align: center
+    +clearfix
+    li
+      width: 28%
+      margin: 0 2.65%
+      padding: 0
+      float: left
+      height: 250px
+      &:last-child
+        // margin: 0
+      a
+        position: relative
+        +size(100%)
+        display: block
+        text-align: center
+        text-decoration: none
+        text-transform: lowercase
+        div
+          position: absolute
+          top: 0
+          left: 0
+          +size(100%)
+          background-position: center
+          background-size: cover
+          &.milk
+            background: url(/wp-content/themes/noosa/img/details-milk.jpg) no-repeat
+          &.honey
+            background: url(/wp-content/themes/noosa/img/details-honey.jpg) no-repeat
+          &.raspberry
+            background: url(/wp-content/themes/noosa/img/details-raspberries.jpg) no-repeat
+          span
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 20
+            font-size: 40px
+            font-family: $mrslollipop
+            color: #fff
+            display: block
+            +size(100% auto)
+            line-height: 250px
+          img
+            position: absolute
+            top: 0px
+            left: 0px
+            height: 251px
+
+
+
+#product-nutrition
+  h1
+    font-size: 75px
+    line-height: 75px
+    margin: 0 0 10px 0
+    padding: 90px 2.5% 0
+    color: #000
+    text-align: center
+  ul.tabs
+    margin: 50px auto
+    list-style: none
+    padding: 0
+    text-align: center
+    li
+      display: inline-block
+      +size(146px 42px)
+      background-image: url(/wp-content/themes/noosa/img/nutrition-mask.svg)
+      background-repeat: no-repeat
+      background-size: 100% 100%
+      margin: 0 1%
+      padding: 0
+      &.inactive
+        background-color: #fff
+        a
+          color: $darkgray
+      a
+        color: #fff
+        font-size: 20px
+        line-height: 42px
+        text-decoration: none
+        display: block
+        +size(100%)
+  .facts
+    width: 90%
+    padding: 0 5%
+    +clearfix
+    h2
+      font-size: 18px
+      line-height: 18px
+      margin: 0 0 35px 0
+      padding: 0 0 35px 0
+      font-family: $rockwell
+    .left
+      margin: 0 3% 0 0
+      padding: 0 3% 0 0
+      border-right: 1px solid $darkgray
+      width: 57%
+      float: left
+      h2
+        border-bottom: 1px solid $darkgray
+      .facts-wrap
+        +size(100% 375px)
+        position: relative
+        .facts-block
+          +clearfix
+          position: absolute
+          top: 0px
+          left: 0px
+          width: 100%
+          .items
+            float: left
+            width: 45%
+            margin: 0 4.5% 0 0
+            padding: 0 4.5% 0 0
+            list-style: none
+            border-right: 1px solid $darkgray
+            &:last-child
+              border: 0px
+              margin: 0
+              padding: 0
+            li
+              font-size: 18px
+              line-height: 28px
+              color: $darkgray
+              padding: 0
+              margin: 0
+              font-family: $avenir
+              strong
+                font-weight: 500
+                padding: 0 10px 0 0
+                font-family: $rockwell
+              span
+                float: right
+                display: block
+              em
+                font-style: normal
+              &.break
+                margin: 0 0 20px 0
+                padding: 0 0 20px 0
+                border-bottom: 1px solid $darkgray
+    .right
+      float: right
+      width: 36%
+      h2
+        margin: 0
+        padding: 0
+      p
+        font-size: 18px
+        line-height: 32px
+        color: $darkgray
+        font-family: $avenir
+        margin: 0
+        padding: 10px 0 0
+
+#product-more
+  h1
+    font-size: 75px
+    line-height: 75px
+    margin: 0 0 10px 0
+    padding: 90px 2.5% 0
+    color: #000
+    text-align: center
+
+// ======================================================================================================
+// ======================================= END PRODUCT PAGE =============================================
+// ======================================================================================================
+
+// ======================================================================================================
+// ====================================== START RECIPES PAGE ============================================
+// ======================================================================================================
+
+#recipe-details
+  margin: -100px 0 40px
+  .timing
+    width: 40%
+    margin: 0 0 0 10%
+    float: left
+    +clearfix
+    .cell
+      width: 40%
+      float: left
+      color: $darkgray
+      &:last-child
+        width: 20%
+      span
+        font-size: 18px
+        line-height: 28px
+        text-transform: lowercase
+        display: block
+      strong
+        font-size: 40px
+        line-height: 40px
+        font-family: $mrslollipop
+  .social
+    width: 40%
+    margin: 20px 10% 0 0
+    padding: 0
+    float: right
+    list-style: none
+    text-align: right
+    +clearfix
+    li
+      width: 38px
+      margin: 0 0 0 30px
+      padding: 0
+      display: inline-block
+      a
+        display: block
+        +size(38px 42px)
+        text-decoration: none
+        position: relative
+        .mask
+          +size(100%)
+          position: absolute
+          top: 0px
+          left: 0px
+          z-index: 10
+        .icon
+          position: absolute
+          top: 10px
+          left: 8px
+          z-index: 15
+          +size(50%)
+          &.instagram
+            left: 10px
+        .fill
+          +size(38px 42px)
+          position: absolute
+          top: 0px
+          left: 0px
+          z-index: 1
+
+
+#recipe-description
+  .wrap
+    width: 100%
+    margin: 30px auto 0
+    .lid
+      float: left
+      width: 33.33%
+      a
+        display: block
+        text-decoration: none
+        color: $darkgray
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+        font-family: $rockwell
+        float: right
+        margin: 0 40px 0 0
+        img
+          max-width: 240px
+          display: block
+          text-align: center
+          margin: 0 auto 10px
+          min-width: 200px
+          min-height: 200px
+    h1
+      font-size: 40px
+      line-height: 40px
+      margin: 0 0 20px 0
+      padding: 50px 0 0
+    p
+      font-size: 18px
+      line-height: 30px
+      color: $darkgray
+      margin: 0
+      padding: 0 15% 0 0
+      font-family: $avenir
+
+#recipe-instructions
+  margin: 80px 0 0
+  .wrap
+    ul
+      width: 30%
+      margin: 0 0 0 10%
+      padding: 0
+    ol
+      width: 40%
+      margin: 0
+      padding: 0 0 0 2.5%
+      border-left: 1px solid $darkgray
+    ul, ol
+      float: left
+      list-style: none
+      li
+        font-size: 18px
+        line-height: 28px
+        color: $darkgray
+        margin: 0 0 10px 0
+        h2
+          font-size: 40px
+          color: $darkgray
+          margin: 0 0 20px 0
+          padding: 0
+          font-family: $mrslollipop
+          text-transform: lowercase
+        strong
+          display: inline-block
+          width: 25%
+          font-size: 24px
+          line-height: 30px
+          margin: 0 10px 0 0
+          font-family: $mrslollipop
+    ol
+      li
+        margin: 0 0 20px 0
+        padding: 0
+        position: relative
+        &:last-child
+          margin: 0px
+        img
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 5
+          border: 0px
+          +size(38px 42px)
+        span
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 10
+          display: block
+          +size(38px 42px)
+          text-align: center
+          line-height: 42px
+          color: #fff
+          font-family: $mrslollipop
+        p
+          margin: 0
+          padding: 0 0 0 50px
+
+#recipe-photos
+  .wrap
+    width: 64%
+    padding: 100px 0 60px
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      +clearfix
+      li
+        width: 32%
+        float: left
+        margin: 0 2% 0 0
+        padding: 0
+        &:last-child
+          margin: 0
+        a
+          display: block
+          img
+            border: 0
+            +size(100% auto)
+
+#recipe-blogger
+  .wrap
+    width: 58%
+    padding: 20px 0
+    color: $darkgray
+    img
+      float: left
+      max-width: 296px
+      margin: 0 20px 0 0
+    span
+      display: block
+      margin: 20px 0 0
+      font-size: 18px
+      line-height: 18px
+      font-family: $rockwell
+    h1
+      font-size: 40px
+      line-height: 40px
+      margin: 4px 0 10px 0
+      padding: 0
+    p
+      font-size: 18px
+      line-height: 28px
+      margin: 0 0 20px 0
+      padding: 0
+      font-family: $avenir
+    a
+      display: block
+      float: left
+      background-image: url(/wp-content/themes/noosa/img/nutrition-mask.svg)
+      +size(149px 43px)
+      background-size: 100% 100%
+      color: #fff
+      font-size: 18px
+      line-height: 43px
+      text-align: center
+      text-decoration: none
+      font-family: $rockwelllight
+
+#recipes-toolbar
+  margin: 0 0 30px 0
+  h1
+    font-size: 40px
+    margin: 0 0 0 10%
+    padding: 0
+    width: 57.6%
+    float: left
+  form
+    width: 23%
+    float: left
+    .search
+      border: 1px solid $hdarkgray
+      border-radius: 2px
+      padding: 10px 20px
+      +clearfix
+      input
+        float: left
+        width: 75%
+        border: 0
+        padding: 0
+        margin: 0
+        line-height: 24px
+        &.mag
+          float: right
+          +size(22px 24px)
+
+
+// ======================================================================================================
+// ======================================= END RECIPES PAGE =============================================
+// ======================================================================================================
+
+// ======================================================================================================
+// ===================================== START PRODUCTS PAGE ============================================
+// ======================================================================================================
+
+#products
+  .mates-for-life
+    position: absolute
+    top: 24%
+    left: 27%
+    width: 45%
+    @media(max-width:1024px)
+      position: relative
+      top: auto
+      left: auto
+      width: 80%
+      margin: 0 auto
+    .blurb
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      z-index: 5
+      h1
+        font-size: 100px
+        line-height: 92px
+        color: #fff
+        margin: 0
+        text-align: center
+        padding: 19% 15% 8%
+        @media(max-width:1280px)
+          font-size: 90px
+          line-height: 82px
+      p
+        color: #fff
+        font-size: 18px
+        line-height: 28px
+        margin: 0 20%
+        padding: 0
+        text-align: center
+      a
+        margin: 4% auto 0
+        padding: 0
+        text-align: center
+        display: block
+        +size(160px 42px)
+        position: relative
+        span
+          display: block
+          +size(100%)
+          text-align: center
+          color: $skyBlue
+          position: absolute
+          top: 10px
+          left: 0
+          z-index: 5
+          font-family: $rockwelllight
+          text-transform: lowercase
+
+    svg
+      width: 100%
+  ul
+    li
+      margin: 0 .3% 4%
+      min-height: 200px
+      @media (max-width: 1024px)
+        width: 32%
+        margin: 0 .25% 3%
+      @media (max-width: 768px)
+        width: 48%
+        margin: 0 .25% 3%
+      @media (max-width: 480px)
+        width: 98%
+        margin: 0 1% 3%
+      &.left
+        float: left
+        margin: 0 24.3% 3% .3%
+      &.right
+        float: right
+        margin: 0 .3% 3% 24.3%
+        +clearfix
+      &.left, &.right
+        @media (max-width:1024px)
+          float: none
+          margin: 0 .25% 3%
+      img
+        +size(80% auto)
+
+// ======================================================================================================
+// ====================================== END PRODUCTS PAGE =============================================
+// ======================================================================================================
+
+// ======================================================================================================
+// ====================================== START CONTACT PAGE ============================================
+// ======================================================================================================
+
+
+.page-template-page-contact
+
+  h2
+    font-size: 70px
+
+  section
+    margin: 100px auto
+    text-align: center
+    position: relative
+
+    p
+      max-width: 700px
+      margin-left: auto
+      margin-right: auto
+
+    &.header
+      margin-top: 150px
+
+      hr
+        background-color: $darkgray
+        margin: 60px auto
+
+      .cow
+        position: absolute
+        bottom: 0
+        left: 0
+
+    &.form
+      background: $blue
+      border-radius: 25px
+      padding: 100px 0
+      -webkit-border-radius: 25px
+      overflow: hidden
+
+      .col-6
+        padding: 0 6%
+
+      .card-mountains
+        position: absolute
+        width: 700px
+        height: 400px
+        bottom: 0
+        left: 0
+
+        .mountains
+          position: absolute
+          bottom: -20px
+          left: -10px
+
+        .wheel
+          width: 48px
+          position: absolute
+          bottom: 183px
+          left: 470px
+          +animation( rotate-wheel 5s linear infinite )
+
+          &:hover
+            +animation( rotate-wheel-hover 5s ease-out infinite )
+
+      .form-col
+        color: white
+        border-left: 1px solid $darkgray
+        text-align: left
+
+        .form-header
+          color: white
+          font-size: 30px
+          line-height: 40px
+
+        .wpcf7-form
+
+          p
+            margin: 0 0 10px
+
+          span.wpcf7-list-item
+            margin: 0
+
+          .wpcf7-form-control-wrap
+            display: block
+            width: 100%
+
+            input[type="text"],
+            input[type="email"],
+            select,
+            textarea
+              font-size: 16px
+              width: 80%
+              border: none
+              border-radius: 3px
+              margin: 0 0 28px
+              line-height: 36px
+              text-indent: 10px
+
+            textarea
+              height: 108px
+              min-height: 108px
+              text-indent: 0
+              max-width: 80%
+              line-height: 1.2
+              padding: 10px
+
+            select
+              height: 36px
+
+            &.signup
+              font-size: 16px
+
+              input[type="checkbox"]
+                width: 16px
+                height: 16px
+                margin: 0 6px 0 0
+                position: relative
+                top: 2px
+
+        #contact-submit
+          float: right
+          margin-right: 20%
+
+          .blob
+            fill: white
+
+          .blob-label
+            color: $blue
+
+    &.info
+      background: $honey
+      max-width: 960px
+
+      a
+        text-decoration: none
+        color: $darkgray

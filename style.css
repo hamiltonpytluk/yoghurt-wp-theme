@@ -1,0 +1,1690 @@
+@import url(http://fast.fonts.net/cssapi/40f2feb1-bef4-46e0-8c76-50c7a0bc7449.css);
+/*---------- */
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+}
+.wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* FRUIT COLORS */
+svg path.raspberry {
+  fill: #e40d62;
+}
+
+.raspberry {
+  background-color: #e40d62;
+}
+.raspberry.facts {
+  background-color: transparent;
+}
+.raspberry.facts h2 {
+  color: #e40d62;
+}
+.raspberry.blurb a {
+  color: #e40d62;
+}
+.raspberry.portion {
+  background-color: transparent;
+  color: #e40d62;
+}
+
+svg path.pumpkin {
+  fill: #f5ac39;
+}
+
+.pumpkin {
+  background-color: #f5ac39;
+}
+.pumpkin.facts {
+  background-color: transparent;
+}
+.pumpkin.facts h2 {
+  color: #f5ac39;
+}
+.pumpkin.blurb a {
+  color: #f5ac39;
+}
+.pumpkin.portion {
+  background-color: transparent;
+  color: #f5ac39;
+}
+
+svg path.strawberry {
+  fill: #e56d7b;
+}
+
+.strawberry {
+  background-color: #e56d7b;
+}
+.strawberry.facts {
+  background-color: transparent;
+}
+.strawberry.facts h2 {
+  color: #e56d7b;
+}
+.strawberry.blurb a {
+  color: #e56d7b;
+}
+.strawberry.portion {
+  background-color: transparent;
+  color: #e56d7b;
+}
+
+svg path.lemon {
+  fill: #ffed6e;
+}
+
+.lemon {
+  background-color: #ffed6e;
+}
+.lemon.facts {
+  background-color: transparent;
+}
+.lemon.facts h2 {
+  color: #ffed6e;
+}
+.lemon.blurb a {
+  color: #ffed6e;
+}
+.lemon.portion {
+  background-color: transparent;
+  color: #ffed6e;
+}
+
+#recipe-blogger a.lemon {
+  color: #211d1e !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+  font-family: "Avenir LT W01_35 Light";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mrs Lollipop W00 Regular";
+  text-transform: lowercase;
+  margin: 0 auto 1rem;
+  line-height: 1;
+  color: #222222;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #211d1e;
+}
+a.phone-link {
+  cursor: default;
+}
+
+p {
+  margin: 0 0 2rem;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+input, textarea, select {
+  font-size: 18px;
+  font-family: "Avenir LT W01_35 Light";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: #211d1e;
+}
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+  color: #211d1e;
+}
+input:-moz-placeholder, textarea:-moz-placeholder, select:-moz-placeholder {
+  color: #211d1e;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
+  color: #211d1e;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+hr {
+  height: 4px;
+  width: 100%;
+  background: url(/wp-content/themes/noosa/img/hr.png) 0;
+  padding: 0;
+  margin: 20px auto;
+  border: 0;
+  max-width: 1280px;
+}
+
+.yoghurt-button {
+  background: transparent url("img/recipe-button-blue.png") center no-repeat;
+  background-size: contain;
+  position: relative;
+  line-height: 48px;
+  color: white;
+  padding: 5px 30px;
+  display: inline-block;
+  font-family: "Rockwell W01";
+  font-size: 21px;
+  text-transform: lowercase;
+}
+.yoghurt-button svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.yoghurt-button svg .blob {
+  -webkit-transition: 0.2s fill 0;
+  -moz-transition: 0.2s fill 0;
+  transition: 0.2s fill 0;
+}
+.yoghurt-button .blob-label {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.yoghurt-button:hover svg .blob {
+  fill: #00729a;
+}
+
+.lid-list {
+  margin: 40px auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.lid-list li {
+  width: 24%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+}
+.lid-list li a {
+  font-size: 24px;
+  line-height: 50px;
+  color: #211d1e;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-family: "Mrs Lollipop W00 Regular";
+}
+.lid-list li a img {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  border: 0;
+  height: auto;
+  width: 100%;
+}
+
+.picture-mast {
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  padding: 86px 0 0;
+  background-size: cover;
+}
+.picture-mast .wrap {
+  z-index: 10;
+}
+.picture-mast .wrap h1 {
+  margin: 0 0 20px 0;
+  padding: 70px 380px 0 100px;
+  font-size: 75px;
+  line-height: 75px;
+  float: left;
+  color: white;
+  display: inline-block;
+  font-weight: 100;
+}
+.picture-mast .wrap img {
+  border-radius: 50%;
+  height: 86px;
+  width: 86px;
+  float: left;
+  margin: 0 10px 0 100px;
+  display: block;
+}
+.picture-mast .wrap span {
+  line-height: 86px;
+  font-size: 18px;
+  color: white;
+  font-weight: 100;
+}
+.picture-mast .wrap p {
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  width: 50%;
+  padding: 0 0 0 8%;
+  margin: 0;
+}
+.picture-mast .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/wp-content/themes/noosa/img/recipe-mast-mask.png) no-repeat bottom center;
+}
+
+.recipe-more h1 {
+  font-size: 75px;
+  line-height: 75px;
+  margin: 0 0 10px 0;
+  padding: 60px 2.5% 20px;
+  color: black;
+  text-align: center;
+}
+.recipe-more .wrap {
+  width: 80%;
+  padding: 0 0 100px 0;
+}
+.recipe-more .wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: auto;
+  width: 100%;
+}
+.recipe-more .wrap ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.recipe-more .wrap ul li {
+  width: 31.33%;
+  float: left;
+  margin: 0 1% 2%;
+  padding: 0;
+  overflow-x: hidden;
+}
+.recipe-more .wrap ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  margin: 0;
+}
+.recipe-more .wrap ul li a img {
+  border: 0;
+  height: auto;
+  width: 100%;
+}
+.recipe-more .wrap ul li a img.mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: auto;
+  width: 110%;
+}
+.recipe-more .wrap ul li a h2 {
+  font-size: 18px;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  color: white;
+  font-family: "Rockwell W01 Light";
+}
+.recipe-more .wrap a {
+  color: white;
+  font-size: 21px;
+  line-height: 62px;
+  text-decoration: none;
+  text-transform: lowercase;
+  display: block;
+  margin: 80px auto 0;
+  text-align: center;
+  position: relative;
+  font-family: "Rockwell W01 Light";
+  height: 62px;
+  width: 182px;
+}
+.recipe-more .wrap a span {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.recipe-more .wrap a span svg {
+  height: 9px;
+  width: 15px;
+}
+.recipe-more .wrap a .button {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.recipe-more .wrap a .button svg {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: 86px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: url(/wp-content/themes/noosa/img/header-mask.png) no-repeat center top;
+}
+header .logo-link {
+  display: inline-block;
+  margin: 19px 19% 0 0;
+  padding: 0;
+  float: left;
+  height: 48px;
+  width: 209px;
+}
+header .logo-link img {
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+header #nav-canvas {
+  position: absolute;
+  left: 50%;
+  margin-left: -634px;
+  top: 0;
+}
+header nav {
+  position: relative;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav ul li {
+  padding: 0;
+  margin: 0 2.5%;
+  display: inline-block;
+}
+header nav ul li a {
+  line-height: 86px;
+  font-family: "Rockwell W01 Light";
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+}
+
+.flip-v {
+  -webkit-transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+.flip-h {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.r-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.r-90n {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.hero {
+  padding-top: 86px;
+  text-align: center;
+}
+
+#content {
+  background: white;
+}
+
+#product-mast {
+  min-height: 600px;
+  background-image: url(/wp-content/themes/noosa/img/product-description-mask.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+#product-mast h1 {
+  margin: 0;
+  padding: 68px 0 0 100px;
+  font-size: 94px;
+  line-height: 94px;
+  float: left;
+  color: white;
+  display: inline-block;
+}
+#product-mast img {
+  border: 0;
+  padding: 65px 0 0 30px;
+}
+#product-mast .navigation {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  border: 1px solid rgba(33, 29, 30, 0.5);
+  border-right: 0px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 110px;
+}
+#product-mast .navigation li {
+  padding: 12px 0;
+}
+#product-mast .navigation li.previous, #product-mast .navigation li.next {
+  border-bottom: 1px solid rgba(33, 29, 30, 0.5);
+}
+#product-mast .navigation li.previous a, #product-mast .navigation li.next a {
+  display: block;
+  text-decoration: none;
+  height: 39px;
+  width: 38px;
+  margin: 0 auto;
+  background: url(/wp-content/themes/noosa/img/blob-arrow.png) no-repeat center center;
+}
+#product-mast .navigation li.previous a span, #product-mast .navigation li.next a span {
+  display: none;
+}
+#product-mast .navigation li.next {
+  border-top: 1px solid rgba(33, 29, 30, 0.5);
+  border-bottom: 0px;
+}
+#product-mast .navigation li.next a {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#product-mast .navigation li.more {
+  padding: 24px 0;
+}
+#product-mast .navigation li.more a {
+  text-align: center;
+  color: #211d1e;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 15px;
+  line-height: 18px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#product-mast .navigation li.more a img {
+  display: block;
+  border: 0;
+  padding: 0 0 6px 0;
+  margin: 0 auto;
+}
+
+#product-description .product-image {
+  float: left;
+  margin: -180px 0 0;
+}
+#product-description .block {
+  margin: -200px 0 0;
+  float: right;
+  padding: 150px 0px 0 0;
+}
+#product-description .block h1 {
+  font-size: 40px;
+  line-height: 48px;
+  color: #211d1e;
+  margin: 0 100px 10px 0;
+  padding: 0;
+  width: 420px;
+}
+#product-description .block p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #211d1e;
+  margin: 0 100px 30px 0;
+  padding: 0;
+  width: 420px;
+}
+#product-description .block form {
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+#product-description .block form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#product-description .block form span {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #211d1e;
+  font-family: "Rockwell W01";
+  float: left;
+}
+#product-description .block form input {
+  margin: 0 10px;
+  padding: 0 10px;
+  line-height: 40px;
+  border: 1px solid rgba(33, 29, 30, 0.5);
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100px;
+  font-family: "Avenir LT W01_55 Roman";
+  color: #211d1e;
+  font-size: 14px;
+  float: left;
+}
+#product-description .block form .submit-button {
+  height: 39px;
+  width: 38px;
+  position: relative;
+  float: left;
+}
+#product-description .block form .submit-button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#product-description .block form .submit-button input {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+#product-description .block form .submit-button input:hover {
+  cursor: pointer;
+}
+#product-description .block .product-sizes {
+  margin: 0;
+  padding: 0 0 100px 0;
+  list-style: none;
+}
+#product-description .block .product-sizes li {
+  padding: 0;
+  margin: 0 0 0 25px;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  color: #211d1e;
+  min-height: 104px;
+}
+#product-description .block .product-sizes li span {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#product-description .block .product-sizes li .key {
+  height: 56px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+#product-description .block .product-sizes li .mask {
+  background: url(/wp-content/themes/noosa/img/product-sizes-mask.png) no-repeat 0 0;
+  height: 56px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+#product-description .block .product-sizes li.oz-8 {
+  width: 60px;
+}
+#product-description .block .product-sizes li.oz-16 {
+  width: 54px;
+}
+#product-description .block .product-sizes li.oz-16 .mask {
+  background-position: -60px 0;
+}
+#product-description .block .product-sizes li.pack-4 {
+  width: 79px;
+}
+#product-description .block .product-sizes li.pack-4 .mask {
+  background-position: -114px 0;
+}
+#product-description .block .product-sizes li.pack-v {
+  width: 114px;
+}
+#product-description .block .product-sizes li.pack-v .mask {
+  background-position: -193px 0;
+}
+
+#product-social .left {
+  float: left;
+  width: 315px;
+  margin: 0 20px 0 0;
+}
+#product-social #instagram, #product-social #twitter {
+  display: block;
+  position: relative;
+  height: 315px;
+  width: 315px;
+}
+#product-social #instagram .icon, #product-social #twitter .icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#product-social #instagram .icon a, #product-social #twitter .icon a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#product-social #instagram .icon a span, #product-social #twitter .icon a span {
+  display: none;
+}
+#product-social #instagram {
+  top: -5px;
+}
+#product-social #instagram .icon {
+  height: 45px;
+  width: 53px;
+}
+#product-social #instagram .icon a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: url(/wp-content/themes/noosa/img/blob-instagram.png) no-repeat 0 0;
+}
+#product-social #instagram .icon div {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+}
+#product-social #instagram .mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#product-social #instagram .mask img {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+#product-social #twitter {
+  margin: 20px 0 0 0;
+}
+#product-social #twitter .icon {
+  height: 45px;
+  width: 53px;
+}
+#product-social #twitter .icon a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: url(/wp-content/themes/noosa/img/blob-twitter.png) no-repeat 0 0;
+}
+#product-social #twitter .icon div {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+}
+#product-social #twitter .tweet {
+  position: absolute;
+  top: 22%;
+  left: 7.5%;
+  width: 85%;
+  height: 70%;
+  z-index: 10;
+}
+#product-social #twitter .tweet p {
+  color: white;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+}
+#product-social #twitter .tweet .meta {
+  position: absolute;
+  bottom: 0;
+}
+#product-social #twitter .tweet .meta a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+#product-social #twitter img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#product-social .recipe {
+  height: 644px;
+  width: 945px;
+  float: right;
+  position: relative;
+}
+#product-social .recipe img {
+  height: auto;
+  width: 100%;
+  border: 0;
+}
+#product-social .recipe .blurb {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3% 2.5%;
+}
+#product-social .recipe .blurb h1 {
+  color: white;
+  font-size: 34px;
+  line-height: 34px;
+  margin: 0 0 6px 0;
+  padding: 0;
+  text-transform: lowercase;
+  font-family: "Mrs Lollipop W00 Regular";
+}
+#product-social .recipe .blurb p {
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+#product-social .recipe .blurb a {
+  display: block;
+  height: 62px;
+  width: 165px;
+  background: url(/wp-content/themes/noosa/img/recipe-button.svg) no-repeat center center;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-family: "Rockwell W01";
+  font-size: 20px;
+  line-height: 62px;
+  margin: 18px 5% 0;
+  float: right;
+  text-align: center;
+}
+
+#product-details h1 {
+  font-size: 75px;
+  line-height: 75px;
+  margin: 0 0 10px 0;
+  padding: 90px 5% 0;
+  color: black;
+  text-align: center;
+}
+#product-details p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #211d1e;
+  margin: 0;
+  padding: 0 15%;
+  text-align: center;
+}
+#product-details ul {
+  margin: 60px auto 0;
+  max-width: 1280px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#product-details ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#product-details ul li {
+  width: 28%;
+  margin: 0 2.65%;
+  padding: 0;
+  float: left;
+  height: 250px;
+}
+#product-details ul li a {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#product-details ul li a div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+#product-details ul li a div.milk {
+  background: url(/wp-content/themes/noosa/img/details-milk.jpg) no-repeat;
+}
+#product-details ul li a div.honey {
+  background: url(/wp-content/themes/noosa/img/details-honey.jpg) no-repeat;
+}
+#product-details ul li a div.raspberry {
+  background: url(/wp-content/themes/noosa/img/details-raspberries.jpg) no-repeat;
+}
+#product-details ul li a div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 40px;
+  font-family: "Mrs Lollipop W00 Regular";
+  color: white;
+  display: block;
+  height: auto;
+  width: 100%;
+  line-height: 250px;
+}
+#product-details ul li a div img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 251px;
+}
+
+#product-nutrition h1 {
+  font-size: 75px;
+  line-height: 75px;
+  margin: 0 0 10px 0;
+  padding: 90px 2.5% 0;
+  color: black;
+  text-align: center;
+}
+#product-nutrition ul.tabs {
+  margin: 50px auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+#product-nutrition ul.tabs li {
+  display: inline-block;
+  height: 42px;
+  width: 146px;
+  background-image: url(/wp-content/themes/noosa/img/nutrition-mask.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 1%;
+  padding: 0;
+}
+#product-nutrition ul.tabs li.inactive {
+  background-color: white;
+}
+#product-nutrition ul.tabs li.inactive a {
+  color: #211d1e;
+}
+#product-nutrition ul.tabs li a {
+  color: white;
+  font-size: 20px;
+  line-height: 42px;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#product-nutrition .facts {
+  width: 90%;
+  padding: 0 5%;
+}
+#product-nutrition .facts:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#product-nutrition .facts h2 {
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 0 35px 0;
+  padding: 0 0 35px 0;
+  font-family: "Rockwell W01";
+}
+#product-nutrition .facts .left {
+  margin: 0 3% 0 0;
+  padding: 0 3% 0 0;
+  border-right: 1px solid #211d1e;
+  width: 57%;
+  float: left;
+}
+#product-nutrition .facts .left h2 {
+  border-bottom: 1px solid #211d1e;
+}
+#product-nutrition .facts .left .facts-wrap {
+  height: 375px;
+  width: 100%;
+  position: relative;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items {
+  float: left;
+  width: 45%;
+  margin: 0 4.5% 0 0;
+  padding: 0 4.5% 0 0;
+  list-style: none;
+  border-right: 1px solid #211d1e;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items:last-child {
+  border: 0px;
+  margin: 0;
+  padding: 0;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items li {
+  font-size: 18px;
+  line-height: 28px;
+  color: #211d1e;
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir LT W01_55 Roman";
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items li strong {
+  font-weight: 500;
+  padding: 0 10px 0 0;
+  font-family: "Rockwell W01";
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items li span {
+  float: right;
+  display: block;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items li em {
+  font-style: normal;
+}
+#product-nutrition .facts .left .facts-wrap .facts-block .items li.break {
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #211d1e;
+}
+#product-nutrition .facts .right {
+  float: right;
+  width: 36%;
+}
+#product-nutrition .facts .right h2 {
+  margin: 0;
+  padding: 0;
+}
+#product-nutrition .facts .right p {
+  font-size: 18px;
+  line-height: 32px;
+  color: #211d1e;
+  font-family: "Avenir LT W01_55 Roman";
+  margin: 0;
+  padding: 10px 0 0;
+}
+
+#product-more h1 {
+  font-size: 75px;
+  line-height: 75px;
+  margin: 0 0 10px 0;
+  padding: 90px 2.5% 0;
+  color: black;
+  text-align: center;
+}
+
+#recipe-details {
+  margin: -100px 0 40px;
+}
+#recipe-details .timing {
+  width: 40%;
+  margin: 0 0 0 10%;
+  float: left;
+}
+#recipe-details .timing:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#recipe-details .timing .cell {
+  width: 40%;
+  float: left;
+  color: #211d1e;
+}
+#recipe-details .timing .cell:last-child {
+  width: 20%;
+}
+#recipe-details .timing .cell span {
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: lowercase;
+  display: block;
+}
+#recipe-details .timing .cell strong {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "Mrs Lollipop W00 Regular";
+}
+#recipe-details .social {
+  width: 40%;
+  margin: 20px 10% 0 0;
+  padding: 0;
+  float: right;
+  list-style: none;
+  text-align: right;
+}
+#recipe-details .social:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#recipe-details .social li {
+  width: 38px;
+  margin: 0 0 0 30px;
+  padding: 0;
+  display: inline-block;
+}
+#recipe-details .social li a {
+  display: block;
+  height: 42px;
+  width: 38px;
+  text-decoration: none;
+  position: relative;
+}
+#recipe-details .social li a .mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+#recipe-details .social li a .icon {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  z-index: 15;
+  height: 50%;
+  width: 50%;
+}
+#recipe-details .social li a .icon.instagram {
+  left: 10px;
+}
+#recipe-details .social li a .fill {
+  height: 42px;
+  width: 38px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#recipe-description .wrap {
+  width: 100%;
+  margin: 30px auto 0;
+}
+#recipe-description .wrap .lid {
+  float: left;
+  width: 33.33%;
+}
+#recipe-description .wrap .lid a {
+  display: block;
+  text-decoration: none;
+  color: #211d1e;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Rockwell W01";
+  float: right;
+  margin: 0 40px 0 0;
+}
+#recipe-description .wrap .lid a img {
+  max-width: 240px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px;
+  min-width: 200px;
+  min-height: 200px;
+}
+#recipe-description .wrap h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+  padding: 50px 0 0;
+}
+#recipe-description .wrap p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #211d1e;
+  margin: 0;
+  padding: 0 15% 0 0;
+  font-family: "Avenir LT W01_55 Roman";
+}
+
+#recipe-instructions {
+  margin: 80px 0 0;
+}
+#recipe-instructions .wrap ul {
+  width: 30%;
+  margin: 0 0 0 10%;
+  padding: 0;
+}
+#recipe-instructions .wrap ol {
+  width: 40%;
+  margin: 0;
+  padding: 0 0 0 2.5%;
+  border-left: 1px solid #211d1e;
+}
+#recipe-instructions .wrap ul, #recipe-instructions .wrap ol {
+  float: left;
+  list-style: none;
+}
+#recipe-instructions .wrap ul li, #recipe-instructions .wrap ol li {
+  font-size: 18px;
+  line-height: 28px;
+  color: #211d1e;
+  margin: 0 0 10px 0;
+}
+#recipe-instructions .wrap ul li h2, #recipe-instructions .wrap ol li h2 {
+  font-size: 40px;
+  color: #211d1e;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: "Mrs Lollipop W00 Regular";
+  text-transform: lowercase;
+}
+#recipe-instructions .wrap ul li strong, #recipe-instructions .wrap ol li strong {
+  display: inline-block;
+  width: 25%;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 10px 0 0;
+  font-family: "Mrs Lollipop W00 Regular";
+}
+#recipe-instructions .wrap ol li {
+  margin: 0 0 20px 0;
+  padding: 0;
+  position: relative;
+}
+#recipe-instructions .wrap ol li:last-child {
+  margin: 0px;
+}
+#recipe-instructions .wrap ol li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  border: 0px;
+  height: 42px;
+  width: 38px;
+}
+#recipe-instructions .wrap ol li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  height: 42px;
+  width: 38px;
+  text-align: center;
+  line-height: 42px;
+  color: white;
+  font-family: "Mrs Lollipop W00 Regular";
+}
+#recipe-instructions .wrap ol li p {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+
+#recipe-photos .wrap {
+  width: 64%;
+  padding: 100px 0 60px;
+}
+#recipe-photos .wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#recipe-photos .wrap ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#recipe-photos .wrap ul li {
+  width: 32%;
+  float: left;
+  margin: 0 2% 0 0;
+  padding: 0;
+}
+#recipe-photos .wrap ul li:last-child {
+  margin: 0;
+}
+#recipe-photos .wrap ul li a {
+  display: block;
+}
+#recipe-photos .wrap ul li a img {
+  border: 0;
+  height: auto;
+  width: 100%;
+}
+
+#recipe-blogger .wrap {
+  width: 58%;
+  padding: 20px 0;
+  color: #211d1e;
+}
+#recipe-blogger .wrap img {
+  float: left;
+  max-width: 296px;
+  margin: 0 20px 0 0;
+}
+#recipe-blogger .wrap span {
+  display: block;
+  margin: 20px 0 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Rockwell W01";
+}
+#recipe-blogger .wrap h1 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 4px 0 10px 0;
+  padding: 0;
+}
+#recipe-blogger .wrap p {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-family: "Avenir LT W01_55 Roman";
+}
+#recipe-blogger .wrap a {
+  display: block;
+  float: left;
+  background-image: url(/wp-content/themes/noosa/img/nutrition-mask.svg);
+  height: 43px;
+  width: 149px;
+  background-size: 100% 100%;
+  color: white;
+  font-size: 18px;
+  line-height: 43px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Rockwell W01 Light";
+}
+
+#recipes-toolbar {
+  margin: 0 0 30px 0;
+}
+#recipes-toolbar h1 {
+  font-size: 40px;
+  margin: 0 0 0 10%;
+  padding: 0;
+  width: 57.6%;
+  float: left;
+}
+#recipes-toolbar form {
+  width: 23%;
+  float: left;
+}
+#recipes-toolbar form .search {
+  border: 1px solid rgba(33, 29, 30, 0.5);
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+#recipes-toolbar form .search:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#recipes-toolbar form .search input {
+  float: left;
+  width: 75%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+}
+#recipes-toolbar form .search input.mag {
+  float: right;
+  height: 24px;
+  width: 22px;
+}
+
+#products .mates-for-life {
+  position: absolute;
+  top: 24%;
+  left: 27%;
+  width: 45%;
+}
+@media(max-width:1024px) {
+  #products .mates-for-life {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+#products .mates-for-life .blurb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+#products .mates-for-life .blurb h1 {
+  font-size: 100px;
+  line-height: 92px;
+  color: white;
+  margin: 0;
+  text-align: center;
+  padding: 19% 15% 8%;
+}
+@media(max-width:1280px) {
+  #products .mates-for-life .blurb h1 {
+    font-size: 90px;
+    line-height: 82px;
+  }
+}
+#products .mates-for-life .blurb p {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 20%;
+  padding: 0;
+  text-align: center;
+}
+#products .mates-for-life .blurb a {
+  margin: 4% auto 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+  height: 42px;
+  width: 160px;
+  position: relative;
+}
+#products .mates-for-life .blurb a span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: #00a7e1;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 5;
+  font-family: "Rockwell W01 Light";
+  text-transform: lowercase;
+}
+#products .mates-for-life svg {
+  width: 100%;
+}
+#products ul li {
+  margin: 0 0.3% 4%;
+  min-height: 200px;
+}
+@media (max-width: 1024px) {
+  #products ul li {
+    width: 32%;
+    margin: 0 0.25% 3%;
+  }
+}
+@media (max-width: 768px) {
+  #products ul li {
+    width: 48%;
+    margin: 0 0.25% 3%;
+  }
+}
+@media (max-width: 480px) {
+  #products ul li {
+    width: 98%;
+    margin: 0 1% 3%;
+  }
+}
+#products ul li.left {
+  float: left;
+  margin: 0 24.3% 3% 0.3%;
+}
+#products ul li.right {
+  float: right;
+  margin: 0 0.3% 3% 24.3%;
+}
+#products ul li.right:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 1024px) {
+  #products ul li.left, #products ul li.right {
+    float: none;
+    margin: 0 0.25% 3%;
+  }
+}
+#products ul li img {
+  height: auto;
+  width: 80%;
+}
+
+.page-template-page-contact h2 {
+  font-size: 70px;
+}
+.page-template-page-contact section {
+  margin: 100px auto;
+  text-align: center;
+  position: relative;
+}
+.page-template-page-contact section p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-template-page-contact section.header {
+  margin-top: 150px;
+}
+.page-template-page-contact section.header hr {
+  background-color: #211d1e;
+  margin: 60px auto;
+}
+.page-template-page-contact section.header .cow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.page-template-page-contact section.form {
+  background: #455cc7;
+  border-radius: 25px;
+  padding: 100px 0;
+  -webkit-border-radius: 25px;
+  overflow: hidden;
+}
+.page-template-page-contact section.form .col-6 {
+  padding: 0 6%;
+}
+.page-template-page-contact section.form .card-mountains {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  bottom: 0;
+  left: 0;
+}
+.page-template-page-contact section.form .card-mountains .mountains {
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+}
+.page-template-page-contact section.form .card-mountains .wheel {
+  width: 48px;
+  position: absolute;
+  bottom: 183px;
+  left: 470px;
+  -webkit-animation: rotate-wheel 5s linear infinite;
+  -moz-animation: rotate-wheel 5s linear infinite;
+  animation: rotate-wheel 5s linear infinite;
+}
+.page-template-page-contact section.form .card-mountains .wheel:hover {
+  -webkit-animation: rotate-wheel-hover 5s ease-out infinite;
+  -moz-animation: rotate-wheel-hover 5s ease-out infinite;
+  animation: rotate-wheel-hover 5s ease-out infinite;
+}
+.page-template-page-contact section.form .form-col {
+  color: white;
+  border-left: 1px solid #211d1e;
+  text-align: left;
+}
+.page-template-page-contact section.form .form-col .form-header {
+  color: white;
+  font-size: 30px;
+  line-height: 40px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form p {
+  margin: 0 0 10px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form span.wpcf7-list-item {
+  margin: 0;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap input[type="text"],
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap input[type="email"],
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap select,
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap textarea {
+  font-size: 16px;
+  width: 80%;
+  border: none;
+  border-radius: 3px;
+  margin: 0 0 28px;
+  line-height: 36px;
+  text-indent: 10px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap textarea {
+  height: 108px;
+  min-height: 108px;
+  text-indent: 0;
+  max-width: 80%;
+  line-height: 1.2;
+  padding: 10px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap select {
+  height: 36px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap.signup {
+  font-size: 16px;
+}
+.page-template-page-contact section.form .form-col .wpcf7-form .wpcf7-form-control-wrap.signup input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px 0 0;
+  position: relative;
+  top: 2px;
+}
+.page-template-page-contact section.form .form-col #contact-submit {
+  float: right;
+  margin-right: 20%;
+}
+.page-template-page-contact section.form .form-col #contact-submit .blob {
+  fill: white;
+}
+.page-template-page-contact section.form .form-col #contact-submit .blob-label {
+  color: #455cc7;
+}
+.page-template-page-contact section.info {
+  background: #ffc627;
+  max-width: 960px;
+}
+.page-template-page-contact section.info a {
+  text-decoration: none;
+  color: #211d1e;
+}
